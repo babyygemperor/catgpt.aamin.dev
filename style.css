@@ -1,40 +1,60 @@
-body {
-    background-color: #333;
-    color: white;
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    height: 100vh; /* Viewport height */
+    overflow: hidden; /* Disable scrolling on the body */
 }
 
 #chat-container {
-    width: 95%;
-    height: 95%;
-    border: 1px solid #555;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
     padding: 20px;
+    box-sizing: border-box; /* Include padding in the height calculation */
     background-color: #444;
-    overflow: hidden;
+    color: white;
+    font-family: Arial, sans-serif;
+    border: 1px solid #555;
 }
 
-#chat-box {
-    height: 90%;
-    border: 1px solid #555;
-    overflow-y: auto;
-    padding: 5px;
-    background-color: #222;
+#chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
+#catgpt-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat-box {
+    flex-grow: 1; /* Allows chat box to take up available space */
+    overflow-y: auto; /* Enable scrolling within chat box */
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #222;
+    border: 1px solid #555;
+}
+
 #user-input {
+    flex-grow: 1; /* Allows input to take the remaining space */
+    margin-right: 10px; /* Adds space between input and button */
     width: calc(100% - 60px);
     padding: 5px;
     color: white;
     background-color: #333;
     border: 1px solid #555;
-    margin-right: 10px;
 }
 
 button {

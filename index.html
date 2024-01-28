@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatGPT</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="catgpt-logo.png" />
 </head>
 <body>
 <div id="chat-container">
+    <header id="chat-header">
+        <img src="catgpt-logo.png" alt="CatGPT Logo" id="catgpt-logo">
+        <h1>CatGPT</h1>
+    </header>
     <div id="chat-box"></div>
-    <input type="text" id="user-input" placeholder="Ask CatGPT anything...">
-    <button onclick="sendQuestion()">Meow!</button>
+    <div id="input-container">
+        <input type="text" id="user-input" placeholder="Ask CatGPT anything...">
+        <button onclick="sendQuestion()">Meow!</button>
+    </div>
 </div>
 <script src="script.js"></script>
 </body>
