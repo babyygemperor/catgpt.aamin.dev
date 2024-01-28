@@ -102,3 +102,55 @@ button {
     font-size: 1.2em;
     color: white;
 }
+
+@media (max-width: 768px) {
+    #chat-container {
+        padding: 10px;
+        font-size: 1.2em; /* Slightly reduce font size for smaller screens */
+    }
+
+    #chat-header, #input-container, .chat-message, #disclaimer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #catgpt-logo {
+        width: 80px; /* Slightly reduce the logo size */
+        margin-bottom: 10px;
+    }
+
+    #input-container {
+        justify-content: center;
+    }
+
+    #user-input, button {
+        width: 100%; /* Full width for smaller screens */
+        margin: 5px 0; /* Adjust margin for stacked layout */
+    }
+
+    .profile-pic {
+        width: 45px;
+        height: 45px;
+    }
+
+    .message-text {
+        font-size: 1em; /* Adjust font size for messages */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    #chat-container {
+        font-size: 1em; /* Further reduce font size for very small screens */
+    }
+
+    #catgpt-logo {
+        width: 60px; /* Reduce logo size for very small screens */
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+}
