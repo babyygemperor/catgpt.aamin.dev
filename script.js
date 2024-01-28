@@ -7,7 +7,17 @@ function generateMeow() {
     for (let i = 0; i < meowCount; i++) {
         meows += meowVariations[Math.floor(Math.random() * meowVariations.length)] + " ";
     }
-    return meows.trim();
+    meows = meows.trim();
+    if (Math.random() < 0.5) {
+        meows += '.'
+    } else {
+        if (Math.random() < 0.5) {
+            meows += '!'
+        } else {
+            meows += '?'
+        }
+    }
+    return meows;
 }
 
 function sendQuestion() {
