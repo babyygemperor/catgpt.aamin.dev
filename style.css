@@ -154,3 +154,19 @@ button {
         height: 40px;
     }
 }
+
+@keyframes blurFadeIn {
+    0% {
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.cat-image-loading {
+    display: inline-block;
+    margin-right: 10px;
+}
